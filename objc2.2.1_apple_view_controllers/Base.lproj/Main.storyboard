@@ -16,15 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmn-Am-Apt">
-                                <rect key="frame" x="191" y="120" width="219" height="30"/>
-                                <state key="normal" title="UIModalPresentationFormSheet">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="formSheet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rR1-TX-PFL"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gq-0D-481">
                                 <rect key="frame" x="191" y="158" width="219" height="30"/>
                                 <state key="normal" title="UIModalPresentationPageSheet">
@@ -67,45 +58,60 @@
                                     <action selector="displayActivityVC:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9TQ-zA-ru8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BAn-oH-eYT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BAn-oH-eYT">
                                 <rect key="frame" x="180" y="368" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Ncp-gX-PqK"/>
-                                    <constraint firstAttribute="width" constant="240" id="kTe-81-IGl"/>
+                                    <constraint firstAttribute="width" constant="240" id="Tet-2l-LXj"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgV-2R-Ixw">
-                                <rect key="frame" x="262" y="310" width="79" height="30"/>
-                                <state key="normal" title="UIAlertView">
+                                <rect key="frame" x="243" y="310" width="114" height="30"/>
+                                <state key="normal" title="UIAlertController">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="displayAlertView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MWb-zX-F3Q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmn-Am-Apt">
+                                <rect key="frame" x="191" y="120" width="219" height="30"/>
+                                <state key="normal" title="UIModalPresentationFormSheet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="formSheet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rR1-TX-PFL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="centerX" secondItem="5Gq-0D-481" secondAttribute="centerX" id="Cos-zS-7od"/>
-                            <constraint firstItem="Cbs-iA-VbA" firstAttribute="top" secondItem="Yro-En-Tqi" secondAttribute="bottom" constant="8" symbolic="YES" id="H4v-9R-MLj"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" relation="lessThanOrEqual" secondItem="BAn-oH-eYT" secondAttribute="bottom" constant="104" id="ICC-FV-xWh"/>
-                            <constraint firstItem="BAn-oH-eYT" firstAttribute="centerY" secondItem="MgV-2R-Ixw" secondAttribute="centerY" constant="107" id="TSZ-h1-xnq"/>
-                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="centerX" secondItem="Cbs-iA-VbA" secondAttribute="centerX" constant="-0.5" id="Viq-Rs-dqd"/>
-                            <constraint firstItem="Cbs-iA-VbA" firstAttribute="centerX" secondItem="Yro-En-Tqi" secondAttribute="centerX" id="bNE-Jq-mPA"/>
-                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bj4-c5-tGh"/>
+                            <constraint firstAttribute="centerX" secondItem="nmn-Am-Apt" secondAttribute="centerX" constant="-0.5" id="2sT-hD-4ND"/>
+                            <constraint firstItem="MgV-2R-Ixw" firstAttribute="top" secondItem="Eyh-6X-WcM" secondAttribute="bottom" constant="8" symbolic="YES" id="3Bd-oB-xeX"/>
+                            <constraint firstItem="Yro-En-Tqi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="193" id="3T9-Sa-70W"/>
+                            <constraint firstItem="5Gq-0D-481" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5QJ-OZ-1hf"/>
+                            <constraint firstAttribute="centerX" secondItem="MgV-2R-Ixw" secondAttribute="centerX" id="6mi-wq-A69"/>
+                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="centerX" secondItem="MgV-2R-Ixw" secondAttribute="centerX" id="7FZ-tB-PKX"/>
+                            <constraint firstItem="Yro-En-Tqi" firstAttribute="top" secondItem="5Gq-0D-481" secondAttribute="bottom" constant="8" symbolic="YES" id="CCP-v8-Rmk"/>
+                            <constraint firstItem="nmn-Am-Apt" firstAttribute="top" secondItem="i2k-qg-J7U" secondAttribute="bottom" constant="30" id="DbD-jX-QiL"/>
+                            <constraint firstItem="nmn-Am-Apt" firstAttribute="centerX" secondItem="5Gq-0D-481" secondAttribute="centerX" id="Dpn-u5-UEQ"/>
+                            <constraint firstAttribute="centerX" secondItem="Yro-En-Tqi" secondAttribute="centerX" constant="-1" id="FCo-bN-xPb"/>
+                            <constraint firstItem="nmn-Am-Apt" firstAttribute="leading" secondItem="5Gq-0D-481" secondAttribute="leading" id="Gst-K3-VXg"/>
+                            <constraint firstItem="i2k-qg-J7U" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="49" id="I7f-4p-v9J"/>
+                            <constraint firstItem="5Gq-0D-481" firstAttribute="centerX" secondItem="Eyh-6X-WcM" secondAttribute="centerX" id="JL4-RW-PQ6"/>
+                            <constraint firstItem="BAn-oH-eYT" firstAttribute="top" secondItem="MgV-2R-Ixw" secondAttribute="bottom" constant="28" id="UEC-fK-UPZ"/>
+                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="centerX" secondItem="Cbs-iA-VbA" secondAttribute="centerX" constant="-0.5" id="bTA-Gg-knr"/>
+                            <constraint firstItem="BAn-oH-eYT" firstAttribute="centerX" secondItem="MgV-2R-Ixw" secondAttribute="centerX" id="c3E-ED-ZCT"/>
+                            <constraint firstAttribute="centerX" secondItem="Cbs-iA-VbA" secondAttribute="centerX" constant="-1" id="dhn-zw-zvi"/>
+                            <constraint firstItem="Yro-En-Tqi" firstAttribute="centerX" secondItem="Cbs-iA-VbA" secondAttribute="centerX" id="fWB-Oc-cUu"/>
                             <constraint firstAttribute="centerY" secondItem="nmn-Am-Apt" secondAttribute="centerY" id="fYn-eQ-adH"/>
-                            <constraint firstItem="Yro-En-Tqi" firstAttribute="centerX" secondItem="5Gq-0D-481" secondAttribute="centerX" constant="0.5" id="hNt-9z-hgQ"/>
-                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="top" secondItem="Cbs-iA-VbA" secondAttribute="bottom" constant="8" symbolic="YES" id="haw-Oa-gdB"/>
-                            <constraint firstItem="BAn-oH-eYT" firstAttribute="centerX" secondItem="Eyh-6X-WcM" secondAttribute="centerX" id="iTK-xd-Faz"/>
-                            <constraint firstItem="5Gq-0D-481" firstAttribute="top" secondItem="nmn-Am-Apt" secondAttribute="bottom" constant="8" symbolic="YES" id="iv3-kA-AXq"/>
-                            <constraint firstItem="i2k-qg-J7U" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="49" id="lAF-zZ-P9F"/>
-                            <constraint firstItem="nmn-Am-Apt" firstAttribute="leading" secondItem="5Gq-0D-481" secondAttribute="leading" id="oGQ-Wn-Pg6"/>
-                            <constraint firstItem="nmn-Am-Apt" firstAttribute="centerX" secondItem="5Gq-0D-481" secondAttribute="centerX" id="oJC-cU-3Bj"/>
-                            <constraint firstItem="Yro-En-Tqi" firstAttribute="top" secondItem="5Gq-0D-481" secondAttribute="bottom" constant="8" symbolic="YES" id="qiO-lf-Two"/>
-                            <constraint firstItem="MgV-2R-Ixw" firstAttribute="centerX" secondItem="Eyh-6X-WcM" secondAttribute="centerX" constant="0.5" id="swo-TN-q9H"/>
-                            <constraint firstItem="nmn-Am-Apt" firstAttribute="top" secondItem="i2k-qg-J7U" secondAttribute="bottom" constant="30" id="t4G-9k-YYq"/>
-                            <constraint firstItem="nmn-Am-Apt" firstAttribute="centerX" secondItem="i2k-qg-J7U" secondAttribute="centerX" id="wdO-w4-Pv3"/>
-                            <constraint firstItem="MgV-2R-Ixw" firstAttribute="top" secondItem="Eyh-6X-WcM" secondAttribute="bottom" constant="8" id="yew-KR-dWJ"/>
+                            <constraint firstItem="5Gq-0D-481" firstAttribute="top" secondItem="nmn-Am-Apt" secondAttribute="bottom" constant="8" symbolic="YES" id="g0g-G2-XkR"/>
+                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="top" secondItem="Cbs-iA-VbA" secondAttribute="bottom" constant="8" symbolic="YES" id="gF8-4D-d0t"/>
+                            <constraint firstAttribute="centerX" secondItem="Eyh-6X-WcM" secondAttribute="centerX" constant="-0.5" id="gVw-BW-O4V"/>
+                            <constraint firstItem="i2k-qg-J7U" firstAttribute="centerX" secondItem="nmn-Am-Apt" secondAttribute="centerX" id="gvj-ji-1zc"/>
+                            <constraint firstItem="Cbs-iA-VbA" firstAttribute="top" secondItem="Yro-En-Tqi" secondAttribute="bottom" constant="8" symbolic="YES" id="mG7-Nd-GdV"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="BAn-oH-eYT" secondAttribute="bottom" constant="104" id="n0M-qv-8Hj"/>
+                            <constraint firstAttribute="centerX" secondItem="BAn-oH-eYT" secondAttribute="centerX" id="u4g-R6-tZc"/>
+                            <constraint firstItem="Yro-En-Tqi" firstAttribute="centerX" secondItem="5Gq-0D-481" secondAttribute="centerX" constant="0.5" id="xvA-Sp-1X5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
