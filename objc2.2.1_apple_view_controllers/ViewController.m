@@ -10,7 +10,7 @@
 #import "SecondViewController.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation ViewController
@@ -18,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     secondVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondStoryBoard"];
-
+    self.imageView.image = [UIImage imageNamed:@"tiger"];
+    
 }
 
 -(IBAction)formSheet:(id)sender
@@ -45,15 +46,39 @@
                      completion:nil];
 }
 
-//-(IBAction)fullScreen:(id)sender
-//{
-//    //    UIImagePickerController * pickerView = [UIImagePickerController new];
-//    //    self.secondVC.modalPresentationStyle = UIModalPresentationFormSheet;
-//    //    pickerView.modalPresentationStyle = UIModalPresentationFormSheet;
-//    //    pickerView.modalTransitionStyle = UIModalTransitionStylePartialCurl;
-//    [self presentViewController:secondVC
-//                       animated:YES
-//                     completion:nil];
-//}
+-(IBAction)displayImagePicker:(id)sender
+{
+        UIImagePickerController * pickerView = [UIImagePickerController new];
+        pickerView.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    [self presentViewController:pickerView
+                       animated:YES
+                     completion:nil];
+}
 
+- (IBAction)displayActivityVC:(id)sender {
+
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:@[self.imageView.image]
+                                                                            applicationActivities:nil];
+    [self presentViewController:activityVC
+                       animated:YES
+                     completion:nil];
+}
+
+- (IBAction)displayAlertView:(id)sender {
+    UIAlertController *alertVC = [UIAlertController new];
+    alertVC.title = @"AlertView Title";
+    alertVC.message = @"Alert message";
+    
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction *action) {
+                                                            [alertVC dismissViewControllerAnimated:YES
+                                                                                        completion:nil];
+                                                        }];
+    [alertVC addAction:alertAction];
+                                  
+    [self presentViewController:alertVC
+                       animated:YES
+                     completion:nil];
+}
 @end

@@ -17,9 +17,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmn-Am-Apt">
-                                <rect key="frame" x="191" y="285" width="219" height="30"/>
+                                <rect key="frame" x="191" y="120" width="219" height="30"/>
                                 <state key="normal" title="UIModalPresentationFormSheet">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -27,9 +26,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gq-0D-481">
-                                <rect key="frame" x="191" y="323" width="219" height="30"/>
+                                <rect key="frame" x="191" y="158" width="219" height="30"/>
                                 <state key="normal" title="UIModalPresentationPageSheet">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -43,30 +41,81 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yro-En-Tqi">
-                                <rect key="frame" x="193" y="361" width="216" height="30"/>
+                                <rect key="frame" x="193" y="196" width="216" height="30"/>
                                 <state key="normal" title="UIModalPresentationFullScreen">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="fullScreen:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MF8-aO-kUq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-iA-VbA">
+                                <rect key="frame" x="217" y="234" width="168" height="30"/>
+                                <state key="normal" title="UIIMagePickerController">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayImagePicker:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EfW-4S-yoq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyh-6X-WcM">
+                                <rect key="frame" x="218" y="272" width="165" height="30"/>
+                                <state key="normal" title="UIActivityViewController">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayActivityVC:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9TQ-zA-ru8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BAn-oH-eYT">
+                                <rect key="frame" x="180" y="368" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Ncp-gX-PqK"/>
+                                    <constraint firstAttribute="width" constant="240" id="kTe-81-IGl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgV-2R-Ixw">
+                                <rect key="frame" x="262" y="310" width="79" height="30"/>
+                                <state key="normal" title="UIAlertView">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayAlertView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MWb-zX-F3Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="nmn-Am-Apt" secondAttribute="centerX" constant="-0.5" id="5sw-Wz-elZ"/>
-                            <constraint firstItem="5Gq-0D-481" firstAttribute="top" secondItem="nmn-Am-Apt" secondAttribute="bottom" constant="8" id="Asn-Bx-SIm"/>
-                            <constraint firstItem="Yro-En-Tqi" firstAttribute="top" secondItem="nmn-Am-Apt" secondAttribute="bottom" constant="46" id="Giv-sN-g5q"/>
-                            <constraint firstItem="Yro-En-Tqi" firstAttribute="top" secondItem="5Gq-0D-481" secondAttribute="bottom" constant="8" id="ZxS-Wr-yMb"/>
+                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="centerX" secondItem="5Gq-0D-481" secondAttribute="centerX" id="Cos-zS-7od"/>
+                            <constraint firstItem="Cbs-iA-VbA" firstAttribute="top" secondItem="Yro-En-Tqi" secondAttribute="bottom" constant="8" symbolic="YES" id="H4v-9R-MLj"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" relation="lessThanOrEqual" secondItem="BAn-oH-eYT" secondAttribute="bottom" constant="104" id="ICC-FV-xWh"/>
+                            <constraint firstItem="BAn-oH-eYT" firstAttribute="centerY" secondItem="MgV-2R-Ixw" secondAttribute="centerY" constant="107" id="TSZ-h1-xnq"/>
+                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="centerX" secondItem="Cbs-iA-VbA" secondAttribute="centerX" constant="-0.5" id="Viq-Rs-dqd"/>
+                            <constraint firstItem="Cbs-iA-VbA" firstAttribute="centerX" secondItem="Yro-En-Tqi" secondAttribute="centerX" id="bNE-Jq-mPA"/>
+                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bj4-c5-tGh"/>
                             <constraint firstAttribute="centerY" secondItem="nmn-Am-Apt" secondAttribute="centerY" id="fYn-eQ-adH"/>
-                            <constraint firstItem="i2k-qg-J7U" firstAttribute="centerX" secondItem="nmn-Am-Apt" secondAttribute="centerX" constant="-0.5" id="iAP-5S-Crg"/>
-                            <constraint firstItem="i2k-qg-J7U" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="49" id="m6h-TC-dwV"/>
-                            <constraint firstItem="5Gq-0D-481" firstAttribute="centerX" secondItem="nmn-Am-Apt" secondAttribute="centerX" id="qfm-fY-bau"/>
-                            <constraint firstItem="5Gq-0D-481" firstAttribute="centerX" secondItem="Yro-En-Tqi" secondAttribute="centerX" id="s9u-zq-P80"/>
-                            <constraint firstItem="nmn-Am-Apt" firstAttribute="top" relation="lessThanOrEqual" secondItem="i2k-qg-J7U" secondAttribute="bottom" constant="244" id="uLO-ao-yzw"/>
+                            <constraint firstItem="Yro-En-Tqi" firstAttribute="centerX" secondItem="5Gq-0D-481" secondAttribute="centerX" constant="0.5" id="hNt-9z-hgQ"/>
+                            <constraint firstItem="Eyh-6X-WcM" firstAttribute="top" secondItem="Cbs-iA-VbA" secondAttribute="bottom" constant="8" symbolic="YES" id="haw-Oa-gdB"/>
+                            <constraint firstItem="BAn-oH-eYT" firstAttribute="centerX" secondItem="Eyh-6X-WcM" secondAttribute="centerX" id="iTK-xd-Faz"/>
+                            <constraint firstItem="5Gq-0D-481" firstAttribute="top" secondItem="nmn-Am-Apt" secondAttribute="bottom" constant="8" symbolic="YES" id="iv3-kA-AXq"/>
+                            <constraint firstItem="i2k-qg-J7U" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="49" id="lAF-zZ-P9F"/>
+                            <constraint firstItem="nmn-Am-Apt" firstAttribute="leading" secondItem="5Gq-0D-481" secondAttribute="leading" id="oGQ-Wn-Pg6"/>
+                            <constraint firstItem="nmn-Am-Apt" firstAttribute="centerX" secondItem="5Gq-0D-481" secondAttribute="centerX" id="oJC-cU-3Bj"/>
+                            <constraint firstItem="Yro-En-Tqi" firstAttribute="top" secondItem="5Gq-0D-481" secondAttribute="bottom" constant="8" symbolic="YES" id="qiO-lf-Two"/>
+                            <constraint firstItem="MgV-2R-Ixw" firstAttribute="centerX" secondItem="Eyh-6X-WcM" secondAttribute="centerX" constant="0.5" id="swo-TN-q9H"/>
+                            <constraint firstItem="nmn-Am-Apt" firstAttribute="top" secondItem="i2k-qg-J7U" secondAttribute="bottom" constant="30" id="t4G-9k-YYq"/>
+                            <constraint firstItem="nmn-Am-Apt" firstAttribute="centerX" secondItem="i2k-qg-J7U" secondAttribute="centerX" id="wdO-w4-Pv3"/>
+                            <constraint firstItem="MgV-2R-Ixw" firstAttribute="top" secondItem="Eyh-6X-WcM" secondAttribute="bottom" constant="8" id="yew-KR-dWJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fYn-eQ-adH"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="BAn-oH-eYT" id="CiN-Ej-a7V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
